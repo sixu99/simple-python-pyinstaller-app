@@ -34,8 +34,9 @@ pipeline {
             }
             steps {
                 sh 'echo "run command pyinstaller --onefile sources/add2vals.py "'
-                sh 'echo "docker env infos"'
-                sh 'whoami && id && groups && ls -l /root/.bashrc'
+                sh 'sleep 600'
+                #sh 'echo "docker env infos"'
+                #sh 'whoami && id && groups && ls -l /root/.bashrc'
             }
             post {
                 success {
