@@ -32,11 +32,6 @@ pipeline {
                 sh 'echo "docker env infos"'
                 sh 'whoami && id && groups && ls -l /root/.bashrc'
             }
-            post {
-                success {
-                    archiveArtifacts 'dist/add2vals'
-                }
-            }
         }
     }
 }
